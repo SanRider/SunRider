@@ -20,6 +20,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.eot');
+    src: local('Roboto Medium'), local('Roboto-Medium'),
+        url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Medium.woff') format('woff'),
+        url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
 *,*::after, *::before {
     box-sizing: border-box;
 }
@@ -68,6 +79,17 @@ h6 {
     margin: 0 auto; 
 }
 
+:root {
+    --text-size-medium: 1.6rem;
+}
+
+.block_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .button {
     border-radius: 5rem;
     padding: 1rem 3rem;
@@ -102,7 +124,7 @@ h6 {
 }  
 
 .header_nav a {               
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     font-weight: 400;                           
     line-height: 150%;
 }        
@@ -116,7 +138,7 @@ h6 {
 .header_button {
     margin-left: 55.3rem;
     background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     line-height: 150%;
 }
 
@@ -152,17 +174,17 @@ h6 {
 
 .main-display_button{
     background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     line-height: 150%;
 }
 .timer_item {
     width: 10.2rem;
     height: 10.2rem;
     background-color: #121212;
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 .timer_item:not(:last-child) {
@@ -176,7 +198,7 @@ h6 {
 }
 
 .timer_text {
-    font-size: 1.6rem ;
+    font-size: var(--text-size-medium) ;
     line-height: 140%;
     opacity: 0.4;
 
@@ -211,7 +233,7 @@ h6 {
 }
 
 .work_description {
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     line-height: 160%;
 }
 
@@ -221,9 +243,13 @@ h6 {
 
 }
 
+.process .process_img {
+    transform: rotate(45deg);
+}
 .process_img {
     width: 9rem;
     height: 4.5rem;
+    margin-right: 2rem;
 }
 
 .process_header {
@@ -231,6 +257,7 @@ h6 {
     font-weight: 700;
     font-size: 4.8rem;
     line-height: 140%;
+    padding-top: 1rem;
 }
 
 .process_title {
@@ -240,7 +267,7 @@ h6 {
 .process_description {
     max-width: 41.1rem;
     margin-bottom: 8rem;
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     line-height: 160%;
     opacity: 0.5;
 }
@@ -276,6 +303,116 @@ h6 {
     line-height: 160%;
     opacity: 0.5;
 }
+
+.command {
+    padding-bottom: 20rem;
+}
+
+.command_title {
+    margin-bottom: 12.9rem;  
+}
+
+.command_header {
+    margin-bottom: 0;
+}
+
+.command_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 11rem;
+    padding-right: 11rem;
+}
+
+/* .command_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+
+.command_img {
+    width: 19rem;
+    height: 19rem;
+    margin-bottom: 4rem;
+    border-radius: 50%;
+}
+
+.command_name {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 140%;
+}
+
+.command_professional {
+    margin-bottom: 3rem;
+    font-size: var(--text-size-medium);
+    line-height: 160%;
+}
+
+.command_link {
+    font-size: var(--text-size-medium);
+    line-height: 150%;
+    border: 0.1rem solid #FFFFFF;
+}
+
+.assembly {
+    padding-bottom: 24.4rem;
+}
+
+/* .assembly_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+
+.assembly_header {
+    margin-bottom: 3rem;
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 140%;
+}
+
+.assembly_description {
+    margin-bottom: 4.52rem;
+    font-size: var(--text-size-medium);
+    line-height: 160%;
+}
+
+.assembly_button {
+    margin-bottom: 5.08rem;
+    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+    font-weight: 700;
+    font-size: var(--text-size-medium);
+    line-height: 150%;
+}
+
+.assembly_socials {
+    display: flex;
+}
+
+.assembly_item {
+    background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.assembly_item img {
+    width: 50%;
+    height: 50%;
+    
+}
+
+.assembly_item:not(:last-child) {
+    margin-right: 3rem;
+}
+ 
+
 
 
 
